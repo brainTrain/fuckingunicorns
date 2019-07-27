@@ -2,5 +2,8 @@
   <img src="/fucking-unicorn.png" />
 </template>
 
-<style>
+<style scoped>
+  img {
+    width: 100%;
+  }
 </style>
