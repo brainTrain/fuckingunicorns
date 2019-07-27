@@ -1,39 +1,24 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <FuckingUnicorn />   
       <h1 class="title">
         fuckingunicorns
       </h1>
       <h2 class="subtitle">
         🦄🦄🦄🦄🦄
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import FuckingUnicorn from '~/components/fucking-unicorn.vue'
 
 export default {
   components: {
-    Logo
+    FuckingUnicorn 
   }
 }
 </script>
