@@ -1,9 +1,9 @@
 <template>
-  <img src="/fucking-unicorn.png" />
+  <img class="image" src="/fucking-unicorn.png" />
 </template>
 
 <style scoped>
-  img {
+  .image {
     width: 100%;
   }
 </style>

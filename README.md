@@ -19,4 +19,19 @@ $ npm run start
 $ npm run generate
 ```
 
+## github pages generating/publishing
+``` bash
+# build project
+$ npm run build
+
+# generate static project
+$ npm run generate
+
+# generate github pages static project
+$ npm run generate:gh-pages
+
+# deploy github pages static project
+$ npm run deploy
+```
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
