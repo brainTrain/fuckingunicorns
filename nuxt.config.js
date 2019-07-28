@@ -10,7 +10,7 @@ const routerBase = isGithubPages ? {
 
 export default {
   ...routerBase,
-  publicPath,
+  publicPath: './',
   mode: 'universal',
   /*
   ** Headers of the page
