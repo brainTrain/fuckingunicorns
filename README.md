@@ -34,4 +34,10 @@ $ npm run generate:gh-pages
 $ npm run deploy
 ```
 
+## nginx stuffs
+ ```bash
+sudo nginx -t
+sudo systemctl restart nginx
+```
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
