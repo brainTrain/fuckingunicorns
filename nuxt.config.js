@@ -1,5 +1,6 @@
 const isGithubPages = process.env.DEPLOY_ENV === 'GH_PAGES';
 const githubUrl = '/fuckingunicorns/';
+const publicPath = isGithubPages ? githubUrl : '/';
 
 const routerBase = isGithubPages ? {
   router: {
@@ -9,6 +10,7 @@ const routerBase = isGithubPages ? {
 
 export default {
   ...routerBase,
+  publicPath,
   mode: 'universal',
   /*
   ** Headers of the page
