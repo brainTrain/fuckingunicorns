@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <div
-      class="container"
-      v-bind:style="styleObject"
-    >
-      <slot></slot>
-    </div>
+  <div
+    class="cell"
+    v-bind:style="styleObject"
+  >
+    <slot></slot>
   </div>
 </template>
 
@@ -54,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.cell {
   position: absolute;
   animation: fly linear infinite;
 
