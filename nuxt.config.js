@@ -7,14 +7,7 @@ const routerBase = isGithubPages ? {
   }
 } : {};
 
-const staticBase = isGithubPages ? {
-  output: {
-    publicPath: githubUrl
-  }
-} : {};
-
 export default {
-  ...staticBase,
   ...routerBase,
   mode: 'universal',
   /*

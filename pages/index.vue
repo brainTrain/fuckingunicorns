@@ -1,5 +1,8 @@
 <template>
-  <div class="container">
+  <div
+    class="container"
+    v-bind:style="containerStyle"
+  >
     <div class="fucking-grid">
       <AnimatedCell
         v-for="index in totalUnicorns"
@@ -26,6 +29,7 @@
 import AnimatedCell from '~/components/animated-cell.vue';
 import FuckingUnicorn from '~/components/fucking-unicorn.vue';
 import RainDown from '~/components/rain-down.vue';
+import OKComputerBackground from '~/assets/okcomputer-bg.jpg';
 
 export default {
   components: {
@@ -46,6 +50,9 @@ export default {
       horizontalMin: -100,
       verticalMax: 100,
       verticalMin: -100,
+      containerStyle: {
+        background: `url(${OKComputerBackground})`,
+      },
     }
   },
 }
@@ -60,7 +67,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('/okcomputer-bg.jpg');
   background-size: contain;
 }
 
