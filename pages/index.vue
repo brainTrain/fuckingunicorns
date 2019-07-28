@@ -45,7 +45,7 @@ export default {
       horizontalMax: 100,
       horizontalMin: -100,
       verticalMax: 100,
-      verticalMin: -100,
+      verticalMin: -10,
     }
   },
 }

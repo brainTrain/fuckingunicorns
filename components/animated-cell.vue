@@ -60,7 +60,7 @@ export default {
 
   /* keyframe style initialization */
   opacity: 0;
-  transform: translate(0, 0) scale(0.2) rotate(0deg);
+  transform: translate(0, 0) scale(1) rotate(0deg);
 }
 
 @keyframes fly {
@@ -68,12 +68,12 @@ export default {
     opacity: 1;
   }
 
-  80% {
+  90% {
     opacity: 1;
   }
 
   100% {
-    transform: translate(110vh, 110vh) scale(1) rotate(47deg);
+    transform: translate(120vh, 120vh) scale(0.2) rotate(10deg);
     opacity: 0;
   }
 }
