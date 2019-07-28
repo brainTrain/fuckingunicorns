@@ -1,10 +1,20 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+const isGithubPages = process.env.DEPLOY_ENV === 'GH_PAGES';
+const githubUrl = '/fuckingunicorns/';
+
+const routerBase = isGithubPages ? {
   router: {
-    base: '/fuckingunicorns/'
+    base: githubUrl
+  }
+} : {};
+
+const staticBase = isGithubPages ? {
+  output: {
+    publicPath: githubUrl
   }
 } : {};
 
 export default {
+  ...staticBase,
   ...routerBase,
   mode: 'universal',
   /*
