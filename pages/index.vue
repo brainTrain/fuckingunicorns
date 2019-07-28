@@ -51,6 +51,12 @@ export default {
 }
 </script>
 
+<style>
+  html {
+    background-image: url('/unplez.gif');
+  }
+</style>
+
 <style scoped>
 .container {
   margin: 0 auto;
@@ -62,6 +68,8 @@ export default {
   text-align: center;
   background-image: url('/okcomputer-bg.jpg');
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .fucking-grid {
