@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" role="main">
     <div class="fucking-grid">
       <AnimatedCell
         v-for="index in totalUnicorns"
