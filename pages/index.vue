@@ -5,6 +5,7 @@
       type="range"
       min="-5"
       max="5"
+      title="slider to change direction of animation"
       v-model="rainDirection"
     />
     <div class="fucking-grid">
@@ -103,10 +104,6 @@ html {
   position: absolute;
 }
 
-.fly-range:focus {
-  outline: none;
-}
-
 .fly-range::-webkit-slider-runnable-track {
   width: 100%;
   height: 25.6px;
@@ -128,10 +125,6 @@ html {
   background-position: center;
 
   -webkit-appearance: none;
-}
-
-.fly-range:focus::-webkit-slider-runnable-track {
-  background: #545a5a;
 }
 
 .fly-range::-moz-range-track {
@@ -187,13 +180,5 @@ html {
   background-image: url('/fly-gai.png');
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.fly-range:focus::-ms-fill-lower {
-  background: #484d4d;
-}
-
-.fly-range:focus::-ms-fill-upper {
-  background: #545a5a;
 }
 </style>
