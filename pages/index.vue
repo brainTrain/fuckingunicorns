@@ -123,6 +123,7 @@ html {
   background-image: url('/fly-gai.png');
   background-repeat: no-repeat;
   background-position: center;
+  border: 4px solid #CCC;
 
   -webkit-appearance: none;
 }
