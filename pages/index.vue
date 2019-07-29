@@ -26,9 +26,6 @@
         <FuckingUnicorn />
       </AnimatedCell>
     </div>
-    <div class="fly-control">
-      <img class="fly-image" src="fly-gai.png" />
-    </div>
     <RainDown />
   </div>
 </template>
@@ -64,9 +61,9 @@ export default {
 </script>
 
 <style>
-  html {
-    background-image: url('/unplez.gif');
-  }
+html {
+  background-image: url('/unplez.gif');
+}
 </style>
 
 <style scoped>
@@ -110,6 +107,95 @@ export default {
 .fly-range {
   z-index: 1;
   width: 100%;
-  margin: 5rem 0;
+  -webkit-appearance: none;
+  top: 0;
+  position: absolute;
+}
+
+.fly-range:focus {
+  outline: none;
+}
+.fly-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 25.6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #484d4d;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+.fly-range::-webkit-slider-thumb {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #FFF;
+  background-image: url('/fly-gai.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  -webkit-appearance: none;
+}
+
+.fly-range:focus::-webkit-slider-runnable-track {
+  background: #545a5a;
+}
+
+.fly-range::-moz-range-track {
+  width: 100%;
+  height: 25.6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #484d4d;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.fly-range::-moz-range-thumb {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #FFF;
+  background-image: url('/fly-gai.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fly-range::-ms-track {
+  width: 100%;
+  height: 25.6px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.fly-range::-ms-fill-lower {
+  background: #3c4040;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.fly-range::-ms-fill-upper {
+  background: #484d4d;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.fly-range::-ms-thumb {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #FFF;
+  background-image: url('/fly-gai.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.fly-range:focus::-ms-fill-lower {
+  background: #484d4d;
+}
+.fly-range:focus::-ms-fill-upper {
+  background: #545a5a;
 }
 </style>
