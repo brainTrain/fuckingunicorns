@@ -3,8 +3,8 @@
     <input
       class="fly-range"
       type="range"
-      min="-10"
-      max="10"
+      min="-5"
+      max="5"
       v-model="rainDirection"
     />
     <div class="fucking-grid">
@@ -27,7 +27,7 @@
       </AnimatedCell>
     </div>
     <div class="fly-control">
-      <img class="fly-image" src="/fly-gai.png" />
+      <img class="fly-image" src="fly-gai.png" />
     </div>
     <RainDown />
   </div>
