@@ -26,7 +26,7 @@
         <FuckingUnicorn />
       </AnimatedCell>
     </div>
-    <RainDown />
+    <RainDown class="music-player" />
   </div>
 </template>
 
@@ -88,6 +88,11 @@ html {
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+.music-player {
+  position: absolute;
+  bottom: 0;
 }
 
 .fly-control {
