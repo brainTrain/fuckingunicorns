@@ -9,6 +9,7 @@
 
 <script>
 const randomNumber = (min, max) => (Math.random() * (max - min) + min);
+const calculateDirection = (value) => (`${parseInt(value) * 100}vh`);
 
 export default {
   props: {
@@ -16,10 +17,11 @@ export default {
     delayMin: Number,
     durationMax: Number,
     durationMin: Number,
-    sizeMax: Number,
-    sizeMin: Number,
     horizontalMax: Number,
     horizontalMin: Number,
+    rainDirection: [Number, String],
+    sizeMax: Number,
+    sizeMin: Number,
     verticalMax: Number,
     verticalMin: Number,
   },
@@ -29,16 +31,18 @@ export default {
       delayMin,
       durationMax,
       durationMin,
-      sizeMax,
-      sizeMin,
       horizontalMax,
       horizontalMin,
+      rainDirection,
+      sizeMax,
+      sizeMin,
       verticalMax,
       verticalMin,
     } = this;
 
     return {
       styleObject: {
+        '--direction': calculateDirection(rainDirection),
         top: `${randomNumber(verticalMin, verticalMax)}%`,
         left: `${randomNumber(horizontalMin, horizontalMax)}%`,
         height: `${randomNumber(sizeMin, sizeMax)}rem`,
@@ -47,11 +51,28 @@ export default {
         animationDelay: `${randomNumber(delayMin, delayMax)}s`
       }
     };
-  }
+  },
+  watch: {
+    rainDirection: function (newValue, oldValue) {
+      const newDirection = calculateDirection(newValue);
+      const newStyle = {
+        ...this.styleObject,
+        '--direction': newDirection,
+      };
+
+      this.styleObject = newStyle;
+    },
+  },
 }
 </script>
 
-<style scoped>
+<style>
+:root {
+  --direction: 200vh;
+}
+</style>
+
+<style>
 .cell {
   position: absolute;
   animation: fly linear infinite;
@@ -62,7 +83,7 @@ export default {
 }
 
 @keyframes fly {
-  25% {
+  5% {
     opacity: 1;
   }
 
@@ -71,7 +92,7 @@ export default {
   }
 
   100% {
-    transform: translate(120vh, 120vh) scale(0.2) rotate(10deg);
+    transform: translate(var(--direction), 200vh) scale(0.2) rotate(10deg);
     opacity: 0;
   }
 }

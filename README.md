@@ -40,4 +40,9 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
+### Radiohead notes/linx
+I N V E S T I N M I S E R Y
+ * http://archive.radiohead.com/2000/nestprod.html
+
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
