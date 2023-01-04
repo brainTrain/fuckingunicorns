@@ -15,7 +15,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "nuxt": "~2.11.0"
+    "nuxt": "~2.15.8"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
@@ -23,6 +23,6 @@
     "jest": "^24.1.0",
     "nodemon": "^1.18.9",
     "push-dir": "~0.4.1",
-    "vue-jest": "^3.0.3"
+    "vue-jest": "^4.0.1"
   }
 }
