@@ -1,5 +1,5 @@
 const isGithubPages = process.env.DEPLOY_ENV === 'GH_PAGES';
-const githubUrl = '/fuckingunicorns/';
+const githubUrl = '/';
 
 const routerBase = isGithubPages ? {
   router: {
